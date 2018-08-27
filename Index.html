@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+
+<body bgcolor='#FFFF00'>
+<!--
+<body bgcolor='
+          if (color_counter == 0) {
+            client.print("#FFFF00");
+            color_counter++;
+          } else if (color_counter == 1) {
+            client.print("#00FF00");
+            color_counter++;
+          } else if (color_counter == 2) {
+            client.print("#0000FF");
+            color_counter++;
+          } else {
+            client.print("#00FFFF");
+            color_counter = 0;
+          }
+'>
+-->
+
+<head>
+<META HTTP-EQUIV=\"refresh\" CONTENT=\"20\">
+
+
+  <script>
+function startTime() { 
+var today = new Date(); 
+var h = today.getHours();
+var m = today.getMinutes();
+var s = today.getSeconds();
+m = checkTime(m);
+s = checkTime(s);
+document.getElementById('txt').innerHTML = 
+h + ':' + m + ':' + s;
+ var t = setTimeout(startTime, 500);
+} 
+function checkTime(i) { 
+if (i < 10) {i = '0' + i};  // add zero in front of numbers < 10 
+return i; 
+} 
+</script> 
+		  
+		  
+<style>table, th, td {border: 1px solid black;padding: 15px; text-align: left;background-color: #f1f1c1;}</style></head>
+
+<body onload='startTime()'><h1> CASETO METEO </h1>
+
+<h2><div id='txt'></div></h2>
+
+
+ <iframe width='450' height='260' style='border: 1px solid green;' src='http://thingspeak.com/channels/525485/widgets/9027'></iframe>
+      <table style='width:100%'><tr><th>CASETO</th><th>Exterior</th><th>Interior</th></tr>
+ </h2>
+<tr><th>Temperatura  &deg;C</th><th>
+(tE);
+</th><th>
+       (tI)
+         </th></tr>
+
+         <tr><th>Humedad  %</th><td>
+    (hE)
+       </td><td>
+        (hI);
+        </td></tr>
+
+       <tr><th>Presion  hPa</th><td>
+       (pE)
+        </td><td>
+        (pI)
+        </td></tr>
+
+         <tr><th>Voltaje  V.</th><td>
+          volt)
+         </td><td>
+ ("")
+        </td></tr>
+
+     </tbody></table>
+
+        <br><br><img src='http://gdurl.com/MtfB'></body></html>
